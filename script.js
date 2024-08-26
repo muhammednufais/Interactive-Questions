@@ -1,5 +1,5 @@
 function submitQuiz() {
-    // Correct answers
+
     const correctAnswers = {
         q1: 'C',
         q2: 'B',
@@ -15,7 +15,7 @@ function submitQuiz() {
 
     let score = 0;
 
-    // Get user answers
+
     const form = document.getElementById('quiz-form');
     const userAnswers = {
         q1: form.q1.value,
@@ -30,14 +30,14 @@ function submitQuiz() {
         q10: form.q10.value
     };
 
-    // Calculate score
+
     for (let question in correctAnswers) {
         if (userAnswers[question] === correctAnswers[question]) {
             score++;
         }
     }
 
-    // Display result
+
     const resultDiv = document.getElementById('result');
     resultDiv.innerHTML = `You scored ${score} out of 10.`;
 
